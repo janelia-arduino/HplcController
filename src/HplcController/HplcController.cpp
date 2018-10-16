@@ -429,7 +429,7 @@ void HplcController::moveJoystickToReachPosition()
   }
 }
 
-void HplcController::activateLickport(const long count)
+void HplcController::activateLickport(long count)
 {
   if ((assay_status_.state_ptr == &constants::state_assay_not_started_string) ||
     (assay_status_.state_ptr == &constants::state_assay_finished_string))
@@ -896,8 +896,8 @@ void HplcController::triggerLickportReward()
   triggerLickport(reward_lickport_delay,constants::reward_lickport_count);
 }
 
-void HplcController::triggerLickport(const long delay,
-  const long count)
+void HplcController::triggerLickport(long delay,
+  long count)
 {
   long lickport_duration;
   modular_server_.property(constants::lickport_duration_property_name).getValue(lickport_duration);
@@ -911,7 +911,7 @@ void HplcController::triggerLickport(const long delay,
     count);
 }
 
-void HplcController::setHomeCurrent(const size_t channel)
+void HplcController::setHomeCurrent(size_t channel)
 {
   if (channel >= constants::CHANNEL_COUNT)
   {
@@ -936,7 +936,7 @@ void HplcController::setIdleCurrent()
   }
 }
 
-void HplcController::restoreCurrentSettings(const size_t channel)
+void HplcController::restoreCurrentSettings(size_t channel)
 {
   restoreHoldCurrent(channel);
   restoreRunCurrent(channel);
