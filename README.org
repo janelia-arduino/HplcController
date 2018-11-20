@@ -17,6 +17,7 @@
 * API NAMES
 
   #+BEGIN_SRC js
+
   #+END_SRC
 
 * API GENERAL
@@ -28,6 +29,8 @@
   [[https://github.com/janelia-arduino/ModularServer]]
 
   [[https://github.com/janelia-arduino/ModularDeviceBase]]
+
+  [[https://github.com/janelia-arduino/PowerSwitchController]]
 
   [[https://github.com/janelia-arduino/MixingValveController]]
 
@@ -42,6 +45,8 @@
   [[https://github.com/janelia-modular-devices/modular_device_base]]
 
   [[https://github.com/janelia-modular-devices/rs232_interface]]
+
+  [[https://github.com/janelia-modular-devices/power_switch_controller]]
 
 * More Detailed Modular Device Information
 
