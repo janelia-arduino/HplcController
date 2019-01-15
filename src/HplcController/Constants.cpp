@@ -27,6 +27,11 @@ const modular_server::FirmwareInfo firmware_info =
 // Clients
 const size_t ultraviolet_detector_interface_address[1] =
 {
+  1,
+};
+
+const size_t pump_interface_address[1] =
+{
   3,
 };
 

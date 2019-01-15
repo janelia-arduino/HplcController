@@ -24,6 +24,7 @@ void HplcController::setup()
 
   // Clients Setup
   ultraviolet_detector_interface_ptr_ = &(createClientAtAddress(ultraviolet_detector_interface::constants::device_name,constants::ultraviolet_detector_interface_address));
+  pump_interface_ptr_ = &(createClientAtAddress(pump_interface::constants::device_name,constants::pump_interface_address));
 
   // Pin Setup
 
@@ -74,17 +75,25 @@ bool HplcController::setupClients()
     modular_server::constants::all_array);
   setup_was_successful = setup_was_successful && ultraviolet_detector_interface_ptr_->callWasSuccessful();
 
+  pump_interface_ptr_->callUntilSuccessful(modular_server::constants::set_properties_to_defaults_function_name,
+    modular_server::constants::all_array);
+  setup_was_successful = setup_was_successful && pump_interface_ptr_->callWasSuccessful();
+
   return setup_was_successful;
 }
 
 void HplcController::start()
 {
+  pump_interface_ptr_->callUntilSuccessful(pump_interface::constants::run_pump_callback_name);
+
   startGradient();
 }
 
 void HplcController::stop()
 {
   stopGradient();
+
+  pump_interface_ptr_->callUntilSuccessful(pump_interface::constants::stop_pump_callback_name);
 }
 
 // Handlers must be non-blocking (avoid 'delay')

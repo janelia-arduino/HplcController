@@ -16,6 +16,7 @@
 
 #include <ModularClient.h>
 #include "UltravioletDetectorInterface.h"
+#include "PumpInterface.h"
 
 #include <ModularServer.h>
 #include <ModularDeviceBase.h>
@@ -43,6 +44,7 @@ private:
   modular_server::Callback callbacks_[hplc_controller::constants::CALLBACK_COUNT_MAX];
 
   ModularClient * ultraviolet_detector_interface_ptr_;
+  ModularClient * pump_interface_ptr_;
 
   bool setupClients();
 

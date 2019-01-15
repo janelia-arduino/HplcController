@@ -40,6 +40,8 @@
 
   [[https://github.com/janelia-arduino/UltravioletDetectorInterface]]
 
+  [[https://github.com/janelia-arduino/PumpInterface]]
+
 * Devices
 
   [[https://github.com/janelia-modular-devices/modular_device_base]]

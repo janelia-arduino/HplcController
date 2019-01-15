@@ -31,6 +31,7 @@ extern ConstantString gradient_info_string;
 
 // Clients
 extern const size_t ultraviolet_detector_interface_address[1];
+extern const size_t pump_interface_address[1];
 
 // Pins
 
