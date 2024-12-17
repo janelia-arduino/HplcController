@@ -5,7 +5,7 @@
 // Authors:
 // Peter Polidoro peter@polidoro.io
 // ----------------------------------------------------------------------------
-#include "../HplcController.h"
+#include "HplcController.h"
 
 
 using namespace hplc_controller;
